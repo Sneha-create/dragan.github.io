@@ -43,6 +43,7 @@ setInterval(() => {
     // console.log(offsetX, offsetY)
     if (offsetX < 73 && offsetY < 52) {
         gameOver.innerHTML = "Game Over - Reload to Play Again"
+        
         obstacle.classList.remove('obstacleAni')
         audiogo.play();
         setTimeout(() => {
@@ -71,3 +72,10 @@ setInterval(() => {
 function updateScore(score) {
     scoreCont.innerHTML = "Your Score: " + score
 }
+const reloadtButton = document.querySelector("#reload");
+// Reload everything:
+function reload() {
+    reload = location.reload();
+}
+// Event listeners for reload
+reloadButton.addEventListener("click", reload, false);
